@@ -8,6 +8,6 @@
 
 <a
 	{href}
-	class="rounded-lg bg-purple-400 text-xl p-2 text-center hover:bg-purple-700 text-white flex-grow mr-2 sm:text-lg sm:p-3 lg:text-xl lg:p-0 hover:text-white"
+	class=" border-solid border-white border-2 rounded-sm bg-red-600 text-xl p-2 text-center hover:bg-red-400 text-white flex-grow mr-2 sm:text-lg sm:p-3 lg:text-xl lg:p-0 hover:text-white"
 	>{@render children?.()}</a
 >

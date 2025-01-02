@@ -9,6 +9,6 @@
 
 <a
 	{href}
-	class="text-white hover:text-white bg-purple-400 text-base rounded-full p-2 hover:bg-purple-500 flex items-stretch"
-	>{@render children?.()}</a
+	class="text-white hover:text-white bg-red-600 text-base rounded-sm p-1 hover:bg-red-400 flex items-stretch"
+	target="_blank">{@render children?.()}</a
 >

@@ -7,6 +7,7 @@
 	import ResultBox from '$lib/ResultBox.svelte';
 	import DualImage from '$lib/DualImage.svelte';
 	import NavButton from '$lib/NavButton.svelte';
+	import ClickableButton from '$lib/ClickableButton.svelte';
 	interface Props {
 		children?: import('svelte').Snippet;
 	}
@@ -15,13 +16,10 @@
 
 <nav class="rounded-lg m-4">
 	<!-- Use flex-wrap to handle wrapping on smaller screens -->
-	<div class="content-center flex flex-wrap justify-evenly gap-2">
+	<div class="content-center flex flex-wrap">
 		<NavButton href="/">Home</NavButton>
 		<NavButton href="/contact">Contact</NavButton>
-		<NavButton href="/gallery">Gallery</NavButton>
 		<NavButton href="/blog">Blog</NavButton>
-		<NavButton href="/stuff_i_host">Stuff I host</NavButton>
-		<NavButton href="/projects">Projects</NavButton>
 	</div>
 </nav>
 <div class="min-h-screen flex flex-col pb-16">
@@ -30,16 +28,13 @@
 	</main>
 	<div class="flex justify-center text-sm pb-8 mt-2">
 		<ResultBox>
-			The source code for this website is available on
-			<a
-				href="https://github.com/gragorther/website-2.0"
-				class="text-white hover:text-white bg-purple-400 text-base rounded-full p-1 hover:bg-purple-500 flex items-stretch"
-				target="_blank"
-				>my <DualImage
+			The source code for this website is available on my <ClickableButton
+				href="https://github.com/gragorther/stopthebigbrother"
+				><DualImage
 					imgSrc="/Octicons-mark-github.svg
 ">GitHub</DualImage
-				>page</a
-			>
+				></ClickableButton
+			>page
 		</ResultBox>
 	</div>
 </div>
