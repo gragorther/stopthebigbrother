@@ -16,7 +16,7 @@
 
 <nav class="rounded-lg m-4">
 	<!-- Use flex-wrap to handle wrapping on smaller screens -->
-	<div class="content-center flex flex-wrap">
+	<div class="content-center flex flex-wrap gap-2 justify-center">
 		<NavButton href="/">Home</NavButton>
 		<NavButton href="/contact">Contact</NavButton>
 		<NavButton href="/blog">Blog</NavButton>
@@ -49,6 +49,8 @@
 	}
 	:global(body) {
 		@apply bg-zinc-900 text-white font-mono text-center;
+		background-image: url('/coolbg.png');
+		background-size: 200px;
 	}
 	/* :global(*) {
 		@apply text-white;
@@ -58,7 +60,7 @@
 		@apply text-lg my-3 mx-4 lg:mx-40 text-center; /* Add smaller margins on mobile */
 	}
 	:global(h1) {
-		@apply shared-properties text-4xl lg:text-6xl from-pink-500 to-violet-500 leading-relaxed;
+		@apply shared-properties text-4xl lg:text-6xl text-red-500 leading-relaxed;
 	}
 	:global(a) {
 		@apply text-lg lg:text-xl text-blue-600 hover:text-blue-400;
