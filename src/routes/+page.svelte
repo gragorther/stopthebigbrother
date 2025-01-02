@@ -10,5 +10,6 @@
 </p>
 <p>
 	To avoid falling into a dystopia, we stand up for the protection of privacy and the right to
-	invisibility. Say no to Big Brother!
+	invisibility.
 </p>
+<p>Let's stop the big brother!</p>
