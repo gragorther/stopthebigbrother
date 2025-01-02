@@ -14,31 +14,38 @@
 	let { children }: Props = $props();
 </script>
 
-<nav class="rounded-lg m-4">
-	<!-- Use flex-wrap to handle wrapping on smaller screens -->
-	<div class="content-center flex flex-wrap gap-2 justify-center">
-		<NavButton href="/">Home</NavButton>
-		<NavButton href="/contact">Contact</NavButton>
-		<NavButton href="/blog">Blog</NavButton>
-	</div>
-</nav>
-<div class="min-h-screen flex flex-col pb-16">
+<!-- Centralized container for consistent scaling -->
+<div class="flex flex-col min-h-screen pb-16">
+	<!-- Navigation Bar -->
+	<nav class="rounded-lg m-4">
+		<div class="container mx-auto px-4 sm:px-8 lg:max-w-4xl flex flex-wrap justify-center gap-4">
+			<NavButton href="/">Home</NavButton>
+			<NavButton href="/contact">Contact</NavButton>
+			<NavButton href="/blog">Blog</NavButton>
+		</div>
+	</nav>
+
+	<!-- Main Content Section -->
 	<main class="flex-grow">
-		{@render children?.()}
+		<div class="container mx-auto px-4 sm:px-8 lg:max-w-4xl">
+			{@render children?.()}
+		</div>
 	</main>
-	<div class="flex justify-center text-sm pb-8 mt-2">
-		<ResultBox>
-			The source code for this website is available on my <ClickableButton
-				href="https://github.com/gragorther/stopthebigbrother"
-				><DualImage
-					imgSrc="/Octicons-mark-github.svg
-">GitHub</DualImage
-				></ClickableButton
-			>page
-		</ResultBox>
-	</div>
+
+	<!-- Footer Section -->
+	<footer class="container mx-auto px-4 sm:px-8 lg:max-w-4xl">
+		<div class="flex justify-center text-sm pb-8 mt-4">
+			<ResultBox>
+				The source code for this website is available on my
+				<ClickableButton href="https://github.com/gragorther/stopthebigbrother">
+					<DualImage imgSrc="/Octicons-mark-github.svg">GitHub</DualImage>
+				</ClickableButton> page.
+			</ResultBox>
+		</div>
+	</footer>
 </div>
 
+<!-- PostCSS Styling for Consistent Scaling -->
 <style lang="postcss">
 	@tailwind base;
 
@@ -48,39 +55,45 @@
 		}
 	}
 	:global(body) {
-		@apply bg-zinc-900 text-white font-mono text-center;
+		@apply bg-zinc-900 text-white font-mono;
 		background-image: url('/coolbg.png');
 		background-size: 200px;
 	}
-	/* :global(*) {
-		@apply text-white;
-	} */
 
 	:global(p) {
-		@apply text-lg my-3 mx-4 lg:mx-40 text-center; /* Add smaller margins on mobile */
-	}
-	:global(h1) {
-		@apply shared-properties text-4xl lg:text-6xl text-red-500 leading-relaxed;
-	}
-	:global(a) {
-		@apply text-lg lg:text-xl text-blue-600 hover:text-blue-400;
-	}
-	:global(h2) {
-		@apply shared-properties text-3xl lg:text-4xl from-orange-500 to-pink-700 leading-relaxed;
+		@apply text-lg my-4 mx-auto text-justify;
+		max-width: 800px;
 	}
 
-	/* Buttons and navigation */
+	:global(h1) {
+		@apply shared-properties text-4xl sm:text-5xl lg:text-6xl text-red-500 leading-relaxed;
+	}
+
+	:global(h2) {
+		@apply shared-properties text-3xl sm:text-4xl lg:text-5xl from-orange-500 to-pink-700 leading-relaxed;
+	}
+
+	:global(a) {
+		@apply text-lg sm:text-xl text-blue-600 hover:text-blue-400;
+	}
+
+	/* Navigation Buttons */
+	:global(.nav-button) {
+		@apply border-solid border-white border-2 rounded-sm bg-red-600 p-2 text-center hover:bg-red-400 text-white;
+		min-width: 140px;
+	}
+
+	/* Responsive Button Layout */
 	:global(.pill-button) {
 		@apply text-white hover:text-white bg-purple-400 rounded-full px-4 py-2 mt-2 hover:bg-purple-500;
 	}
 
-	/* Responsive navigation layout */
+	/* Centralize List Items */
 	:global(ul) {
 		@apply flex flex-row items-center justify-center;
 	}
 
-	/* Make navigation adapt to smaller screens */
-
+	/* Scale List Items Properly */
 	:global(li) {
 		@apply mx-4 text-lg;
 	}
