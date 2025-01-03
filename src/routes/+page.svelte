@@ -1,6 +1,4 @@
 <script>
-	import ClickableButton from '$lib/ClickableButton.svelte';
-	import DualImage from '$lib/DualImage.svelte';
 	import PageTitle from '$lib/PageTitle.svelte';
 </script>
 
