@@ -10,10 +10,8 @@
 	<div class="flex flex-wrap gap-2 justify-center">
 		<li>
 			<ClickableButton href="https://blog.gregtech.eu/contact"
-				><DualImage
-					classes="rounded-full"
-					imgSrc="https://blog.gregtech.eu/favicon.png"
-					imgAlt="GregTech logo">GregTech</DualImage
+				><DualImage classes="rounded-full" imgSrc="/gregtechicon.png" imgAlt="GregTech logo"
+					>GregTech</DualImage
 				></ClickableButton
 			>
 		</li>
