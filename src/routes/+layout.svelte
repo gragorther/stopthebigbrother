@@ -18,7 +18,7 @@
 <div class="flex flex-col min-h-screen pb-16">
 	<!-- Navigation Bar -->
 	<nav class="rounded-lg m-4">
-		<div class="container mx-auto px-4 sm:px-8 lg:max-w-4xl flex flex-wrap justify-center gap-4">
+		<div class="container mx-auto px-2 sm:px-8 lg:max-w-4xl flex flex-wrap justify-center gap-4">
 			<NavButton href="/">Home</NavButton>
 			<NavButton href="/contact">Contact</NavButton>
 			<NavButton href="/blog">Blog</NavButton>
@@ -84,9 +84,6 @@
 	}
 
 	/* Responsive Button Layout */
-	:global(.pill-button) {
-		@apply text-white hover:text-white bg-purple-400 rounded-full px-4 py-2 mt-2 hover:bg-purple-500;
-	}
 
 	/* Centralize List Items */
 	:global(ul) {
