@@ -23,5 +23,5 @@
 <h2>Stand up and do something</h2>
 <p>
 	Don't assume the current state of privacy is set in stone, educate others about privacy and help
-	them protect theirs.
+	them protect theirs, contact your politicians, attend protests or maybe even organise them.
 </p>

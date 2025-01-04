@@ -20,22 +20,19 @@
 	<nav class="rounded-lg m-4">
 		<div class="container mx-auto px-2 sm:px-8 lg:max-w-4xl flex flex-wrap justify-center gap-4">
 			<div class="flex items-center justify-center gap-0">
-				<img
-					src="/favicon.png"
-					alt="This site's logo, an eye"
-					class="ml-1 mr-0.5 object-fill h-11 w-11"
-				/>
+				<!-- Logo in Navbar (Visible on sm and up) -->
+
 				<NavButton href="/">Home</NavButton>
 				<NavButton href="/contact">Contact</NavButton>
 				<NavButton href="/blog">Blog</NavButton>
-				<img
-					src="/favicon.png"
-					alt="This site's logo, an eye"
-					class="mr-1 ml-0.5 object-fill h-11 w-11"
-				/>
 			</div>
 		</div>
 	</nav>
+
+	<!-- Logo Below Navbar for Mobile -->
+	<div class="text-center m-0">
+		<img src="/favicon.png" alt="This site's logo, an eye" class="h-20 w-20 mx-auto" />
+	</div>
 
 	<!-- Main Content Section -->
 	<main class="flex-grow">
@@ -73,7 +70,7 @@
 	}
 
 	:global(p) {
-		@apply text-lg my-4 mx-auto text-justify;
+		@apply text-lg my-4 mx-auto text-center;
 		max-width: 800px;
 	}
 
@@ -82,7 +79,7 @@
 	}
 
 	:global(h2) {
-		@apply shared-properties text-3xl sm:text-4xl lg:text-5xl from-orange-500 to-pink-700 leading-relaxed;
+		@apply shared-properties text-3xl sm:text-3xl lg:text-4xl from-orange-500 to-pink-700 leading-relaxed;
 	}
 
 	:global(a) {
