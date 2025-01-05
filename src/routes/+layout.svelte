@@ -56,13 +56,6 @@
 
 <!-- PostCSS Styling for Consistent Scaling -->
 <style lang="postcss">
-	@tailwind base;
-
-	@layer base {
-		.shared-properties {
-			@apply bg-gradient-to-r text-transparent bg-clip-text font-extrabold mx-auto my-5 text-center p-2;
-		}
-	}
 	:global(body) {
 		@apply bg-zinc-900 text-white font-mono;
 		background-image: url('/coolbg.png');
@@ -75,11 +68,11 @@
 	}
 
 	:global(h1) {
-		@apply shared-properties text-4xl sm:text-5xl lg:text-6xl text-red-500 leading-relaxed;
+		@apply bg-gradient-to-r text-transparent bg-clip-text font-extrabold mx-auto my-5 text-center p-2 text-4xl sm:text-5xl lg:text-6xl text-red-500 leading-relaxed;
 	}
 
 	:global(h2) {
-		@apply shared-properties text-3xl sm:text-3xl lg:text-4xl from-orange-500 to-pink-700 leading-relaxed;
+		@apply bg-gradient-to-r text-transparent bg-clip-text font-extrabold mx-auto my-5 text-center p-2 text-3xl sm:text-3xl lg:text-4xl from-orange-500 to-pink-700 leading-relaxed;
 	}
 
 	:global(a) {
